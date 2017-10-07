@@ -1,0 +1,28 @@
+image img1 = MaxScale("aaron-burden-195608.jpg")
+image img1b = MaxScale("harald-hofer-214964.jpg")
+image img2 = MaxScale("garrett-parker-247225.jpg")
+image img3 = MaxScale("justin-bisson-beck-192842.jpg")
+image img4 = MaxScale("linda-xu-278580.jpg")
+image img5 = MaxScale("luca-bravo-24241.jpg")
+image img6 = MaxScale("meiying-ng-71590.jpg")
+image img7 = MaxScale("milada-vigerova-8293.jpg")
+image img8 = MaxScale("nathan-anderson-273668.jpg")
+image img9 = MaxScale("raphael-koh-259721.jpg")
+image img10 = MaxScale("sean-afnan-202297.jpg")
+image img11 = MaxScale("vincent-guth-183404.jpg")
+
+image black = "#000"
+
+image lockedthumb = MinScale("james-sutton-187816.jpg", maxthumbx, maxthumby)
+
+image thumb1 = MinScale("aaron-burden-195608.jpg", maxthumbx, maxthumby)
+image thumb2 = MinScale("garrett-parker-247225.jpg", maxthumbx, maxthumby)
+image thumb3 = MinScale("justin-bisson-beck-192842.jpg", maxthumbx, maxthumby)
+image thumb4 = MinScale("linda-xu-278580.jpg", maxthumbx, maxthumby)
+image thumb5 = MinScale("luca-bravo-24241.jpg", maxthumbx, maxthumby)
+image thumb6 = MinScale("meiying-ng-71590.jpg", maxthumbx, maxthumby)
+image thumb7 = MinScale("milada-vigerova-8293.jpg", maxthumbx, maxthumby)
+image thumb8 = MinScale("nathan-anderson-273668.jpg", maxthumbx, maxthumby)
+image thumb9 = MinScale("raphael-koh-259721.jpg", maxthumbx, maxthumby)
+image thumb10 = MinScale("sean-afnan-202297.jpg", maxthumbx, maxthumby)
+image thumb11 = MinScale("vincent-guth-183404.jpg", maxthumbx, maxthumby)
