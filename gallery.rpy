@@ -46,7 +46,7 @@ screen gallery:
 
 
     #previous/next buttons
-    $ total_page = len(gallery_items) / maxperpage
+    default total_page = -(-len(gallery_items) / maxperpage)
     $ current_page = gallery_page + 1
     textbutton "Previous":
             xalign 0.1
