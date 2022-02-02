@@ -55,8 +55,7 @@ screen gallery:
                 action SetVariable("gallery_page", gallery_page - 1)
             else:
                 action SetVariable("gallery_page", total_page - 1)
-    textbutton "[current_page] / [total_page] page":
-        action None
+    text "[current_page] / [total_page] page":
         xalign 0.4
         yalign 0.98
     textbutton "Next":
