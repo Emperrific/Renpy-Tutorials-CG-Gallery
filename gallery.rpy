@@ -46,42 +46,34 @@ screen gallery:
 
 
     #previous/next buttons
-    if gallery_page > 0:
-        textbutton "Previous":
-            action SetVariable("gallery_page", gallery_page - 1)
+    default total_page = -(-len(gallery_items) / maxperpage)
+    $ current_page = gallery_page + 1
+    textbutton "Previous":
             xalign 0.1
             yalign 0.98
-    if (gallery_page + 1) * maxperpage < len(gallery_items):
-        textbutton "Next":
+            if gallery_page > 0:
+                action SetVariable("gallery_page", gallery_page - 1)
+            else:
+                action SetVariable("gallery_page", total_page - 1)
+    text "[current_page] / [total_page] page":
+        xalign 0.4
+        yalign 0.98
+    textbutton "Next":
+        xalign 0.9
+        yalign 0.98
+        if (gallery_page + 1) * maxperpage < len(gallery_items):
             action SetVariable("gallery_page", gallery_page + 1)
-            xalign 0.9
-            yalign 0.98
-
+        else:
+            action SetVariable("gallery_page", 0)
     #return button
     textbutton "Return":
         action Return()
-        xalign 0.5
+        xalign 0.6
         yalign 0.98
 
 screen gallery_closeup(images):
-
-    add images[closeup_page] at truecenter
-
-    if closeup_page > 0:
-        textbutton "Previous":
-            action SetVariable("closeup_page", closeup_page - 1)
-            xalign 0.1
-            yalign 0.98
-            background "black"
     if closeup_page < len(images) - 1:
-        textbutton "Next":
-            action SetVariable("closeup_page", closeup_page + 1)
-            xalign 0.9
-            yalign 0.98
-            background "black"
-
-    textbutton "Return":
-        action [SetVariable("closeup_page", 0), Hide("gallery_closeup", dissolve)]
-        xalign 0.5
-        yalign 0.98
-        background "black"
+        key ["game_menu", "K_RETURN","mouseup_1"] action SetVariable("closeup_page", closeup_page + 1)
+    else:
+        key ["game_menu", "K_RETURN","mouseup_1"] action [SetVariable("closeup_page", 0), Hide("gallery_closeup", dissolve)]
+    add images[closeup_page] at truecenter
